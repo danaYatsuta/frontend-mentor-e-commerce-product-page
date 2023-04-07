@@ -540,6 +540,10 @@ video {
   right: 1rem;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
