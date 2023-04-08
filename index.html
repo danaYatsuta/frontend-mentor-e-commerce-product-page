@@ -34,9 +34,11 @@
       }
     </style>
   </head>
-  <body class="font-kumbh-sans text-dark-grayish-blue">
+  <body
+    class="min-h-screen flex-col items-center font-kumbh-sans text-dark-grayish-blue xl:flex"
+  >
     <header
-      class="sticky top-0 z-10 mx-auto max-w-6xl bg-white px-3 pb-1 xl:p-0"
+      class="sticky top-0 z-10 w-full max-w-6xl border-grayish-blue border-opacity-25 bg-white px-3 pb-1 xl:border-b xl:p-0"
     >
       <nav class="flex h-16 justify-between xl:h-28">
         <div class="flex gap-1 xl:gap-14">
@@ -109,43 +111,124 @@
       </nav>
     </header>
 
-    <main>
-      <div class="relative flex items-center">
+    <main class="w-full max-w-5xl items-center justify-between xl:flex xl:grow">
+      <div class="relative flex items-center xl:max-w-md xl:flex-col xl:gap-7">
         <img
           src="./images/image-product-1.jpg"
           alt="Product image"
-          class="h-[300px] w-full object-cover"
+          class="h-[300px] w-full border-transparent object-cover xl:h-full xl:rounded-2xl xl:border-2"
         />
 
         <button
-          class="absolute left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white"
+          class="absolute left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white xl:hidden"
         >
           <img src="./images/icon-previous.svg" alt="Left arrow" />
         </button>
 
         <button
-          class="absolute right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white"
+          class="absolute right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white xl:hidden"
         >
           <img src="./images/icon-next.svg" alt="Right arrow" />
         </button>
+
+        <div class="hidden gap-7 xl:flex">
+          <label for="image-thumbnail-1" class="cursor-pointer">
+            <input
+              type="radio"
+              name="image-thumbnail"
+              id="image-thumbnail-1"
+              checked
+              class="peer hidden"
+            />
+            <div
+              class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+            >
+              <img
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="Product image thumbnail"
+                class="hover:opacity-50"
+              />
+            </div>
+          </label>
+
+          <label for="image-thumbnail-2" class="cursor-pointer">
+            <input
+              type="radio"
+              name="image-thumbnail"
+              id="image-thumbnail-2"
+              class="peer hidden"
+            />
+            <div
+              class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+            >
+              <img
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="Product image thumbnail"
+                class="hover:opacity-50"
+              />
+            </div>
+          </label>
+
+          <label for="image-thumbnail-3" class="cursor-pointer">
+            <input
+              type="radio"
+              name="image-thumbnail"
+              id="image-thumbnail-3"
+              class="peer hidden"
+            />
+            <div
+              class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+            >
+              <img
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="Product image thumbnail"
+                class="hover:opacity-50"
+              />
+            </div>
+          </label>
+
+          <label for="image-thumbnail-4" class="cursor-pointer">
+            <input
+              type="radio"
+              name="image-thumbnail"
+              id="image-thumbnail-4"
+              class="peer hidden"
+            />
+            <div
+              class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+            >
+              <img
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="Product image thumbnail"
+                class="hover:opacity-50"
+              />
+            </div>
+          </label>
+        </div>
       </div>
 
-      <div class="p-6">
+      <div class="p-6 xl:max-w-md xl:p-0">
         <section>
-          <h2 class="text-sm font-bold uppercase tracking-widest text-orange">
+          <h2
+            class="text-sm font-bold uppercase tracking-widest text-orange xl:text-base"
+          >
             Sneaker Company
           </h2>
-          <h1 class="mt-2 text-3xl font-bold text-very-dark-blue">
+          <h1
+            class="mt-2 text-3xl font-bold text-very-dark-blue xl:mt-4 xl:text-5xl"
+          >
             Fall Limited Edition Sneakers
           </h1>
-          <p class="mt-4 tracking-tight">
+          <p class="mt-4 tracking-tight xl:mt-8 xl:text-lg">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they'll withstand everything
             the weather can offer.
           </p>
         </section>
 
-        <div class="mt-6 flex items-center justify-between">
+        <div
+          class="mt-6 flex items-center justify-between xl:mt-8 xl:flex-col xl:items-start xl:gap-2"
+        >
           <div class="flex items-center gap-4">
             <div class="text-3xl font-bold text-very-dark-blue">$125.00</div>
             <div class="rounded-md bg-pale-orange px-2 font-bold text-orange">
@@ -156,23 +239,23 @@
           <div class="font-bold text-grayish-blue line-through">$250.00</div>
         </div>
 
-        <div class="mt-6">
+        <div class="mt-6 flex flex-col gap-4 xl:mt-8 xl:flex-row">
           <div
-            class="flex h-14 items-center justify-between rounded-lg bg-light-grayish-blue"
+            class="flex h-14 items-center justify-between rounded-lg bg-light-grayish-blue xl:w-40"
           >
-            <button class="p-6">
+            <button class="p-6 hover:opacity-50">
               <img src="./images/icon-minus.svg" alt="Minus icon" />
             </button>
 
             <div class="font-bold text-very-dark-blue">0</div>
 
-            <button class="p-6">
+            <button class="p-6 hover:opacity-50">
               <img src="./images/icon-plus.svg" alt="Plus icon" />
             </button>
           </div>
 
           <button
-            class="mt-4 flex h-14 w-full items-center justify-center gap-3 rounded-lg bg-orange shadow-lg shadow-orange/50"
+            class="flex h-14 w-full items-center justify-center gap-3 rounded-lg bg-orange shadow-lg shadow-orange/50 hover:opacity-50 xl:flex-1"
           >
             <svg
               width="22"
