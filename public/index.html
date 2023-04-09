@@ -111,165 +111,159 @@
       </nav>
     </header>
 
-    <main class="w-full max-w-5xl items-center justify-between xl:flex xl:grow">
-      <div class="relative flex items-center xl:max-w-md xl:flex-col xl:gap-7">
-        <img
-          src="./images/image-product-1.jpg"
-          alt="Product image"
-          class="h-[300px] w-full border-transparent object-cover xl:h-full xl:rounded-2xl xl:border-2"
-        />
-
-        <button
-          class="absolute left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white xl:hidden"
-        >
-          <img src="./images/icon-previous.svg" alt="Left arrow" />
-        </button>
-
-        <button
-          class="absolute right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white xl:hidden"
-        >
-          <img src="./images/icon-next.svg" alt="Right arrow" />
-        </button>
-
-        <div class="hidden gap-7 xl:flex">
-          <label for="image-thumbnail-1" class="cursor-pointer">
-            <input
-              type="radio"
-              name="image-thumbnail"
-              id="image-thumbnail-1"
-              checked
-              class="peer hidden"
-            />
-            <div
-              class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
-            >
-              <img
-                src="./images/image-product-1-thumbnail.jpg"
-                alt="Product image thumbnail"
-                class="hover:opacity-50"
-              />
-            </div>
-          </label>
-
-          <label for="image-thumbnail-2" class="cursor-pointer">
-            <input
-              type="radio"
-              name="image-thumbnail"
-              id="image-thumbnail-2"
-              class="peer hidden"
-            />
-            <div
-              class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
-            >
-              <img
-                src="./images/image-product-2-thumbnail.jpg"
-                alt="Product image thumbnail"
-                class="hover:opacity-50"
-              />
-            </div>
-          </label>
-
-          <label for="image-thumbnail-3" class="cursor-pointer">
-            <input
-              type="radio"
-              name="image-thumbnail"
-              id="image-thumbnail-3"
-              class="peer hidden"
-            />
-            <div
-              class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
-            >
-              <img
-                src="./images/image-product-3-thumbnail.jpg"
-                alt="Product image thumbnail"
-                class="hover:opacity-50"
-              />
-            </div>
-          </label>
-
-          <label for="image-thumbnail-4" class="cursor-pointer">
-            <input
-              type="radio"
-              name="image-thumbnail"
-              id="image-thumbnail-4"
-              class="peer hidden"
-            />
-            <div
-              class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
-            >
-              <img
-                src="./images/image-product-4-thumbnail.jpg"
-                alt="Product image thumbnail"
-                class="hover:opacity-50"
-              />
-            </div>
-          </label>
-        </div>
-      </div>
-
-      <div class="p-6 xl:max-w-md xl:p-0">
-        <section>
-          <h2
-            class="text-sm font-bold uppercase tracking-widest text-orange xl:text-base"
-          >
-            Sneaker Company
-          </h2>
-          <h1
-            class="mt-2 text-3xl font-bold text-very-dark-blue xl:mt-4 xl:text-5xl"
-          >
-            Fall Limited Edition Sneakers
-          </h1>
-          <p class="mt-4 tracking-tight xl:mt-8 xl:text-lg">
-            These low-profile sneakers are your perfect casual wear companion.
-            Featuring a durable rubber outer sole, they'll withstand everything
-            the weather can offer.
-          </p>
-        </section>
-
+    <main class="flex w-full max-w-5xl grow">
+      <div class="grow items-center justify-between gap-10 md:mx-10 md:flex">
         <div
-          class="mt-6 flex items-center justify-between xl:mt-8 xl:flex-col xl:items-start xl:gap-2"
+          class="relative flex flex-1 items-center md:max-w-md md:flex-col md:gap-3 lg:gap-7"
         >
-          <div class="flex items-center gap-4">
-            <div class="text-3xl font-bold text-very-dark-blue">$125.00</div>
-            <div class="rounded-md bg-pale-orange px-2 font-bold text-orange">
-              50%
-            </div>
-          </div>
-
-          <div class="font-bold text-grayish-blue line-through">$250.00</div>
-        </div>
-
-        <div class="mt-6 flex flex-col gap-4 xl:mt-8 xl:flex-row">
-          <div
-            class="flex h-14 items-center justify-between rounded-lg bg-light-grayish-blue xl:w-40"
-          >
-            <button class="p-6 hover:opacity-50">
-              <img src="./images/icon-minus.svg" alt="Minus icon" />
-            </button>
-
-            <div class="font-bold text-very-dark-blue">0</div>
-
-            <button class="p-6 hover:opacity-50">
-              <img src="./images/icon-plus.svg" alt="Plus icon" />
-            </button>
-          </div>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product image"
+            class="h-[300px] w-full border-transparent object-cover md:h-full md:rounded-2xl md:border-2"
+          />
 
           <button
-            class="flex h-14 w-full items-center justify-center gap-3 rounded-lg bg-orange shadow-lg shadow-orange/50 hover:opacity-50 xl:flex-1"
+            class="absolute left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white md:hidden"
           >
-            <svg
-              width="22"
-              height="20"
-              xmlns="http://www.w3.org/2000/svg"
-              class="fill-white"
-            >
-              <path
-                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
-                fill-rule="nonzero"
-              />
-            </svg>
-            <p class="font-bold text-white">Add to cart</p>
+            <img src="./images/icon-previous.svg" alt="Left arrow" />
           </button>
+
+          <button
+            class="absolute right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white md:hidden"
+          >
+            <img src="./images/icon-next.svg" alt="Right arrow" />
+          </button>
+
+          <div class="hidden gap-3 md:flex lg:gap-7">
+            <label for="image-thumbnail-1" class="cursor-pointer">
+              <input
+                type="radio"
+                name="image-thumbnail"
+                id="image-thumbnail-1"
+                checked
+                class="peer hidden"
+              />
+              <div
+                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+              >
+                <img
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt="Product image thumbnail"
+                  class="hover:opacity-50"
+                />
+              </div>
+            </label>
+            <label for="image-thumbnail-2" class="cursor-pointer">
+              <input
+                type="radio"
+                name="image-thumbnail"
+                id="image-thumbnail-2"
+                class="peer hidden"
+              />
+              <div
+                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+              >
+                <img
+                  src="./images/image-product-2-thumbnail.jpg"
+                  alt="Product image thumbnail"
+                  class="hover:opacity-50"
+                />
+              </div>
+            </label>
+            <label for="image-thumbnail-3" class="cursor-pointer">
+              <input
+                type="radio"
+                name="image-thumbnail"
+                id="image-thumbnail-3"
+                class="peer hidden"
+              />
+              <div
+                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+              >
+                <img
+                  src="./images/image-product-3-thumbnail.jpg"
+                  alt="Product image thumbnail"
+                  class="hover:opacity-50"
+                />
+              </div>
+            </label>
+            <label for="image-thumbnail-4" class="cursor-pointer">
+              <input
+                type="radio"
+                name="image-thumbnail"
+                id="image-thumbnail-4"
+                class="peer hidden"
+              />
+              <div
+                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+              >
+                <img
+                  src="./images/image-product-4-thumbnail.jpg"
+                  alt="Product image thumbnail"
+                  class="hover:opacity-50"
+                />
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="flex-1 p-6 md:max-w-md md:p-0">
+          <section>
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-orange md:text-base"
+            >
+              Sneaker Company
+            </h2>
+            <h1
+              class="mt-2 text-3xl font-bold text-very-dark-blue md:text-4xl lg:mt-4 lg:text-5xl"
+            >
+              Fall Limited Edition Sneakers
+            </h1>
+            <p class="mt-4 tracking-tight lg:mt-8 lg:text-lg">
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they'll withstand
+              everything the weather can offer.
+            </p>
+          </section>
+          <div
+            class="mt-6 flex items-center justify-between md:flex-col md:items-start md:gap-2 lg:mt-8"
+          >
+            <div class="flex items-center gap-4">
+              <div class="text-3xl font-bold text-very-dark-blue">$125.00</div>
+              <div class="rounded-md bg-pale-orange px-2 font-bold text-orange">
+                50%
+              </div>
+            </div>
+            <div class="font-bold text-grayish-blue line-through">$250.00</div>
+          </div>
+          <div class="mt-6 flex flex-col gap-4 md:flex-row lg:mt-8">
+            <div
+              class="flex h-14 items-center justify-between rounded-lg bg-light-grayish-blue md:w-40"
+            >
+              <button class="p-6 hover:opacity-50">
+                <img src="./images/icon-minus.svg" alt="Minus icon" />
+              </button>
+              <div class="font-bold text-very-dark-blue">0</div>
+              <button class="p-6 hover:opacity-50">
+                <img src="./images/icon-plus.svg" alt="Plus icon" />
+              </button>
+            </div>
+            <button
+              class="flex h-14 w-full items-center justify-center gap-3 rounded-lg bg-orange shadow-lg shadow-orange/50 hover:opacity-50 md:flex-1"
+            >
+              <svg
+                width="22"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-white"
+              >
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill-rule="nonzero"
+                />
+              </svg>
+              <p class="font-bold text-white">Add to cart</p>
+            </button>
+          </div>
         </div>
       </div>
     </main>
