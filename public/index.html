@@ -136,32 +136,36 @@
         <div
           class="relative flex flex-1 items-center md:max-w-md md:flex-col md:gap-3 lg:gap-7"
         >
-          <button id="product-image" class="w-full">
+          <button id="open-lightbox-button" class="w-full">
             <img
               src="./images/image-product-1.jpg"
               alt="Product image"
+              id="product-image"
               class="h-[300px] w-full border-transparent object-cover md:h-full md:rounded-2xl md:border-2"
             />
           </button>
 
           <button
+            id="previous-button"
             class="absolute left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white md:hidden"
           >
             <img src="./images/icon-previous.svg" alt="Left arrow" />
           </button>
 
           <button
+            id="next-button"
             class="absolute right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white md:hidden"
           >
             <img src="./images/icon-next.svg" alt="Right arrow" />
           </button>
 
           <div class="hidden gap-3 md:flex lg:gap-7">
-            <label for="image-thumbnail-1" class="cursor-pointer">
+            <label for="product-image-1" class="cursor-pointer">
               <input
                 type="radio"
-                name="image-thumbnail"
-                id="image-thumbnail-1"
+                name="product-image"
+                id="product-image-1"
+                value="1"
                 checked
                 class="peer hidden"
               />
@@ -176,11 +180,12 @@
               </div>
             </label>
 
-            <label for="image-thumbnail-2" class="cursor-pointer">
+            <label for="product-image-2" class="cursor-pointer">
               <input
                 type="radio"
-                name="image-thumbnail"
-                id="image-thumbnail-2"
+                name="product-image"
+                id="product-image-2"
+                value="2"
                 class="peer hidden"
               />
               <div
@@ -194,11 +199,12 @@
               </div>
             </label>
 
-            <label for="image-thumbnail-3" class="cursor-pointer">
+            <label for="product-image-3" class="cursor-pointer">
               <input
                 type="radio"
-                name="image-thumbnail"
-                id="image-thumbnail-3"
+                name="product-image"
+                id="product-image-3"
+                value="3"
                 class="peer hidden"
               />
               <div
@@ -212,11 +218,12 @@
               </div>
             </label>
 
-            <label for="image-thumbnail-4" class="cursor-pointer">
+            <label for="product-image-4" class="cursor-pointer">
               <input
                 type="radio"
-                name="image-thumbnail"
-                id="image-thumbnail-4"
+                name="product-image"
+                id="product-image-4"
+                value="4"
                 class="peer hidden"
               />
               <div
@@ -297,7 +304,7 @@
         style="display: none"
         class="fixed bottom-0 left-0 right-0 top-0 z-20 flex items-center justify-center bg-black/75"
       >
-        <div class="flex flex-col items-center mx-10">
+        <div class="mx-10 flex flex-col items-center">
           <button id="close-lightbox-button" class="relative h-5 w-5 self-end">
             <svg
               width="14"
