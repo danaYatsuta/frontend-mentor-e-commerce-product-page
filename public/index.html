@@ -114,7 +114,7 @@
     <nav
       id="mobile-menu"
       style="display: none"
-      class="fixed bottom-0 left-0 right-0 top-0 z-20 bg-black bg-opacity-75"
+      class="fixed bottom-0 left-0 right-0 top-0 z-20 bg-black/75"
     >
       <div class="fixed bottom-0 left-0 top-0 w-2/3 bg-white">
         <button id="close-menu-button" class="p-6">
@@ -136,11 +136,13 @@
         <div
           class="relative flex flex-1 items-center md:max-w-md md:flex-col md:gap-3 lg:gap-7"
         >
-          <img
-            src="./images/image-product-1.jpg"
-            alt="Product image"
-            class="h-[300px] w-full border-transparent object-cover md:h-full md:rounded-2xl md:border-2"
-          />
+          <button id="product-image" class="w-full">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="Product image"
+              class="h-[300px] w-full border-transparent object-cover md:h-full md:rounded-2xl md:border-2"
+            />
+          </button>
 
           <button
             class="absolute left-4 flex h-10 w-10 items-center justify-center rounded-full bg-white md:hidden"
@@ -173,6 +175,7 @@
                 />
               </div>
             </label>
+
             <label for="image-thumbnail-2" class="cursor-pointer">
               <input
                 type="radio"
@@ -190,6 +193,7 @@
                 />
               </div>
             </label>
+
             <label for="image-thumbnail-3" class="cursor-pointer">
               <input
                 type="radio"
@@ -207,6 +211,7 @@
                 />
               </div>
             </label>
+
             <label for="image-thumbnail-4" class="cursor-pointer">
               <input
                 type="radio"
@@ -283,6 +288,131 @@
               </svg>
               <p class="font-bold text-white">Add to cart</p>
             </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="lightbox"
+        style="display: none"
+        class="fixed bottom-0 left-0 right-0 top-0 z-20 flex items-center justify-center bg-black/75"
+      >
+        <div class="flex flex-col items-center">
+          <button id="close-lightbox-button" class="relative h-5 w-5 self-end">
+            <svg
+              width="14"
+              height="15"
+              xmlns="http://www.w3.org/2000/svg"
+              class="scale-150 fill-white"
+            >
+              <path
+                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+
+          <div class="relative mt-6 flex max-w-lg items-center">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="Image product"
+              class="rounded-2xl"
+            />
+
+            <button
+              class="absolute left-0 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full bg-white"
+            >
+              <img src="./images/icon-previous.svg" alt="Left arrow" />
+            </button>
+
+            <button
+              class="absolute right-0 flex h-14 w-14 translate-x-1/2 items-center justify-center rounded-full bg-white"
+            >
+              <img src="./images/icon-next.svg" alt="Right arrow" />
+            </button>
+          </div>
+
+          <div class="mt-10 flex max-w-md gap-7">
+            <label for="image-lightbox-1" class="cursor-pointer">
+              <input
+                type="radio"
+                name="image-lightbox"
+                id="image-lightbox-1"
+                checked
+                class="peer hidden"
+              />
+              <div
+                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>div>img]:opacity-50"
+              >
+                <div class="bg-white">
+                  <img
+                    src="./images/image-product-1-thumbnail.jpg"
+                    alt="Product image thumbnail"
+                    class="hover:opacity-50"
+                  />
+                </div>
+              </div>
+            </label>
+
+            <label for="image-lightbox-2" class="cursor-pointer">
+              <input
+                type="radio"
+                name="image-lightbox"
+                id="image-lightbox-2"
+                class="peer hidden"
+              />
+              <div
+                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>div>img]:opacity-50"
+              >
+                <div class="bg-white">
+                  <img
+                    src="./images/image-product-2-thumbnail.jpg"
+                    alt="Product image thumbnail"
+                    class="hover:opacity-50"
+                  />
+                </div>
+              </div>
+            </label>
+
+            <label for="image-lightbox-3" class="cursor-pointer">
+              <input
+                type="radio"
+                name="image-lightbox"
+                id="image-lightbox-3"
+                class="peer hidden"
+              />
+              <div
+                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>div>img]:opacity-50"
+              >
+                <div class="bg-white">
+                  <img
+                    src="./images/image-product-3-thumbnail.jpg"
+                    alt="Product image thumbnail"
+                    class="hover:opacity-50"
+                  />
+                </div>
+              </div>
+            </label>
+
+            <label for="image-lightbox-4" class="cursor-pointer">
+              <input
+                type="radio"
+                name="image-lightbox"
+                id="image-lightbox-4"
+                class="peer hidden"
+              />
+              <div
+                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>div>img]:opacity-50"
+              >
+                <div class="bg-white">
+                  <img
+                    src="./images/image-product-4-thumbnail.jpg"
+                    alt="Product image thumbnail"
+                    class="hover:opacity-50"
+                  />
+                </div>
+              </div>
+            </label>
           </div>
         </div>
       </div>
