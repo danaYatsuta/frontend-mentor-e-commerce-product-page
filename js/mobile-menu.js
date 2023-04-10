@@ -1,21 +1,16 @@
-export default function initializeMobileMenu(
-  menuSelector,
-  openButtonSelector,
-  closeButtonSelector,
-) {
-  const menu = document.querySelector(menuSelector);
-  const openButton = document.querySelector(openButtonSelector);
-  const closeButton = document.querySelector(closeButtonSelector);
-
+export default function initializeMobileMenu() {
   const body = document.querySelector('body');
+  const menu = document.querySelector('#mobile-menu');
+  const openButton = document.querySelector('#open-mobile-menu-button');
+  const closeButton = document.querySelector('#close-mobile-menu-button');
 
   openButton.addEventListener('click', () => {
     menu.style.removeProperty('display');
-    body.style.overflow = 'hidden';
+    body.style.setProperty('overflow', 'hidden');
   });
 
   closeButton.addEventListener('click', () => {
-    menu.style.display = 'none';
+    menu.style.setProperty('display', 'none');
     body.style.removeProperty('overflow');
   });
 }

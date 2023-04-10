@@ -1,47 +1,46 @@
 import images from './images.js';
 
-// TODO inital current image dependant on what image was selected
-// before opening lightbox
+export default class ImageView {
+  constructor(
+    imageSelector,
+    previousButtonSelector,
+    nextButtonSelector,
+    radioButtonsName,
+  ) {
+    this.image = document.querySelector(imageSelector);
+    this.previousButton = document.querySelector(previousButtonSelector);
+    this.nextButton = document.querySelector(nextButtonSelector);
+    this.radioButtons = document.querySelectorAll(
+      `input[name="${radioButtonsName}"]`,
+    );
 
-let currentImage = 0;
+    this.currentImageIndex = 0;
 
-function incrementCurrentImage() {
-  currentImage = currentImage + 1 === images.length ? 0 : currentImage + 1;
-}
-
-function decrementCurrentImage() {
-  currentImage = currentImage - 1 === -1 ? images.length - 1 : currentImage - 1;
-}
-
-export default function initializeImageView(
-  imageSelector,
-  previousButtonSelector,
-  nextButtonSelector,
-) {
-  const image = document.querySelector(imageSelector);
-  const previousButton = document.querySelector(previousButtonSelector);
-  const nextButton = document.querySelector(nextButtonSelector);
-
-  const radioButtons = document.querySelectorAll('input[name="product-image"]');
-
-  radioButtons.forEach((radioButton) => {
-    radioButton.addEventListener('click', () => {
-      if (radioButton.checked) {
-        currentImage = radioButton.value - 1;
-        image.setAttribute('src', images[currentImage]);
-      }
+    this.radioButtons.forEach((radioButton) => {
+      radioButton.addEventListener('click', () => {
+        if (radioButton.checked) {
+          this.setCurrentImageIndex(radioButton.value - 1);
+        }
+      });
     });
-  });
 
-  nextButton.addEventListener('click', () => {
-    incrementCurrentImage();
-    image.setAttribute('src', images[currentImage]);
-    radioButtons[currentImage].checked = true;
-  });
+    this.previousButton.addEventListener('click', () => {
+      this.setCurrentImageIndex(this.currentImageIndex - 1);
+    });
 
-  previousButton.addEventListener('click', () => {
-    decrementCurrentImage();
-    image.setAttribute('src', images[currentImage]);
-    radioButtons[currentImage].checked = true;
-  });
+    this.nextButton.addEventListener('click', () => {
+      this.setCurrentImageIndex(this.currentImageIndex + 1);
+    });
+  }
+
+  setCurrentImageIndex(newCurrentImageIndex) {
+    if (newCurrentImageIndex < 0) {
+      this.currentImageIndex = images.length - 1;
+    } else {
+      this.currentImageIndex = newCurrentImageIndex % images.length;
+    }
+
+    this.radioButtons[this.currentImageIndex].checked = true;
+    this.image.setAttribute('src', images[this.currentImageIndex]);
+  }
 }
