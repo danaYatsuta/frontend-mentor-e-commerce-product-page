@@ -316,16 +316,19 @@
             <img
               src="./images/image-product-1.jpg"
               alt="Image product"
+              id="lightbox-image"
               class="rounded-2xl"
             />
 
             <button
+              id="previous-button-lightbox"
               class="absolute left-0 flex h-14 w-14 -translate-x-1/2 items-center justify-center rounded-full bg-white"
             >
               <img src="./images/icon-previous.svg" alt="Left arrow" />
             </button>
 
             <button
+              id="next-button-lightbox"
               class="absolute right-0 flex h-14 w-14 translate-x-1/2 items-center justify-center rounded-full bg-white"
             >
               <img src="./images/icon-next.svg" alt="Right arrow" />
@@ -333,12 +336,13 @@
           </div>
 
           <div class="mt-10 flex max-w-md gap-7">
-            <label for="image-lightbox-1" class="cursor-pointer">
+            <label for="lightbox-image-1" class="cursor-pointer">
               <input
                 type="radio"
-                name="image-lightbox"
-                id="image-lightbox-1"
+                name="lightbox-image"
+                id="lightbox-image-1"
                 checked
+                value="1"
                 class="peer hidden"
               />
               <div
@@ -354,11 +358,12 @@
               </div>
             </label>
 
-            <label for="image-lightbox-2" class="cursor-pointer">
+            <label for="lightbox-image-2" class="cursor-pointer">
               <input
                 type="radio"
-                name="image-lightbox"
-                id="image-lightbox-2"
+                name="lightbox-image"
+                id="lightbox-image-2"
+                value="2"
                 class="peer hidden"
               />
               <div
@@ -374,11 +379,12 @@
               </div>
             </label>
 
-            <label for="image-lightbox-3" class="cursor-pointer">
+            <label for="lightbox-image-3" class="cursor-pointer">
               <input
                 type="radio"
-                name="image-lightbox"
-                id="image-lightbox-3"
+                name="lightbox-image"
+                id="lightbox-image-3"
+                value="3"
                 class="peer hidden"
               />
               <div
@@ -394,11 +400,12 @@
               </div>
             </label>
 
-            <label for="image-lightbox-4" class="cursor-pointer">
+            <label for="lightbox-image-4" class="cursor-pointer">
               <input
                 type="radio"
-                name="image-lightbox"
-                id="image-lightbox-4"
+                name="lightbox-image"
+                id="lightbox-image-4"
+                value="4"
                 class="peer hidden"
               />
               <div
