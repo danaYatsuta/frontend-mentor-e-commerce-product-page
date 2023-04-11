@@ -198,7 +198,7 @@
           </button>
 
           <div class="hidden gap-3 md:flex lg:gap-7">
-            <label for="product-image-1" class="cursor-pointer">
+            <div class="cursor-pointer">
               <input
                 type="radio"
                 name="product-image"
@@ -207,18 +207,19 @@
                 checked
                 class="peer hidden"
               />
-              <div
-                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+              <label
+                for="product-image-1"
+                class="block overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
               >
                 <img
                   src="./images/image-product-1-thumbnail.jpg"
                   alt="Product image thumbnail"
                   class="hover:opacity-50"
                 />
-              </div>
-            </label>
+              </label>
+            </div>
 
-            <label for="product-image-2" class="cursor-pointer">
+            <div class="cursor-pointer">
               <input
                 type="radio"
                 name="product-image"
@@ -226,18 +227,19 @@
                 value="2"
                 class="peer hidden"
               />
-              <div
-                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+              <label
+                for="product-image-2"
+                class="block overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
               >
                 <img
                   src="./images/image-product-2-thumbnail.jpg"
                   alt="Product image thumbnail"
                   class="hover:opacity-50"
                 />
-              </div>
-            </label>
+              </label>
+            </div>
 
-            <label for="product-image-3" class="cursor-pointer">
+            <div class="cursor-pointer">
               <input
                 type="radio"
                 name="product-image"
@@ -245,18 +247,19 @@
                 value="3"
                 class="peer hidden"
               />
-              <div
-                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+              <label
+                for="product-image-3"
+                class="block overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
               >
                 <img
                   src="./images/image-product-3-thumbnail.jpg"
                   alt="Product image thumbnail"
                   class="hover:opacity-50"
                 />
-              </div>
-            </label>
+              </label>
+            </div>
 
-            <label for="product-image-4" class="cursor-pointer">
+            <div class="cursor-pointer">
               <input
                 type="radio"
                 name="product-image"
@@ -264,16 +267,17 @@
                 value="4"
                 class="peer hidden"
               />
-              <div
-                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
+              <label
+                for="product-image-4"
+                class="block overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>img]:opacity-50"
               >
                 <img
                   src="./images/image-product-4-thumbnail.jpg"
                   alt="Product image thumbnail"
                   class="hover:opacity-50"
                 />
-              </div>
-            </label>
+              </label>
+            </div>
           </div>
         </div>
 
@@ -347,7 +351,7 @@
                   fill-rule="nonzero"
                 />
               </svg>
-              <p class="font-bold text-white">Add to cart</p>
+              <span class="font-bold text-white">Add to cart</span>
             </button>
           </div>
         </div>
@@ -397,29 +401,28 @@
           </div>
 
           <div class="mt-10 flex max-w-md gap-7">
-            <label for="lightbox-image-1" class="cursor-pointer">
+            <div class="cursor-pointer">
               <input
                 type="radio"
                 name="lightbox-image"
                 id="lightbox-image-1"
-                checked
                 value="1"
+                checked
                 class="peer hidden"
               />
-              <div
-                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>div>img]:opacity-50"
+              <label
+                for="lightbox-image-1"
+                class="block overflow-hidden rounded-lg border-2 border-transparent bg-white bg-clip-padding peer-checked:border-orange peer-checked:[&>img]:opacity-50"
               >
-                <div class="bg-white">
-                  <img
-                    src="./images/image-product-1-thumbnail.jpg"
-                    alt="Product image thumbnail"
-                    class="hover:opacity-50"
-                  />
-                </div>
-              </div>
-            </label>
+                <img
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt="Product image thumbnail"
+                  class="hover:opacity-50"
+                />
+              </label>
+            </div>
 
-            <label for="lightbox-image-2" class="cursor-pointer">
+            <div class="cursor-pointer">
               <input
                 type="radio"
                 name="lightbox-image"
@@ -427,20 +430,19 @@
                 value="2"
                 class="peer hidden"
               />
-              <div
-                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>div>img]:opacity-50"
+              <label
+                for="lightbox-image-2"
+                class="block overflow-hidden rounded-lg border-2 border-transparent bg-white bg-clip-padding peer-checked:border-orange peer-checked:[&>img]:opacity-50"
               >
-                <div class="bg-white">
-                  <img
-                    src="./images/image-product-2-thumbnail.jpg"
-                    alt="Product image thumbnail"
-                    class="hover:opacity-50"
-                  />
-                </div>
-              </div>
-            </label>
+                <img
+                  src="./images/image-product-2-thumbnail.jpg"
+                  alt="Product image thumbnail"
+                  class="hover:opacity-50"
+                />
+              </label>
+            </div>
 
-            <label for="lightbox-image-3" class="cursor-pointer">
+            <div class="cursor-pointer">
               <input
                 type="radio"
                 name="lightbox-image"
@@ -448,20 +450,19 @@
                 value="3"
                 class="peer hidden"
               />
-              <div
-                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>div>img]:opacity-50"
+              <label
+                for="lightbox-image-3"
+                class="block overflow-hidden rounded-lg border-2 border-transparent bg-white bg-clip-padding peer-checked:border-orange peer-checked:[&>img]:opacity-50"
               >
-                <div class="bg-white">
-                  <img
-                    src="./images/image-product-3-thumbnail.jpg"
-                    alt="Product image thumbnail"
-                    class="hover:opacity-50"
-                  />
-                </div>
-              </div>
-            </label>
+                <img
+                  src="./images/image-product-3-thumbnail.jpg"
+                  alt="Product image thumbnail"
+                  class="hover:opacity-50"
+                />
+              </label>
+            </div>
 
-            <label for="lightbox-image-4" class="cursor-pointer">
+            <div class="cursor-pointer">
               <input
                 type="radio"
                 name="lightbox-image"
@@ -469,18 +470,17 @@
                 value="4"
                 class="peer hidden"
               />
-              <div
-                class="overflow-hidden rounded-lg border-2 border-transparent peer-checked:border-orange peer-checked:[&>div>img]:opacity-50"
+              <label
+                for="lightbox-image-4"
+                class="block overflow-hidden rounded-lg border-2 border-transparent bg-white bg-clip-padding peer-checked:border-orange peer-checked:[&>img]:opacity-50"
               >
-                <div class="bg-white">
-                  <img
-                    src="./images/image-product-4-thumbnail.jpg"
-                    alt="Product image thumbnail"
-                    class="hover:opacity-50"
-                  />
-                </div>
-              </div>
-            </label>
+                <img
+                  src="./images/image-product-4-thumbnail.jpg"
+                  alt="Product image thumbnail"
+                  class="hover:opacity-50"
+                />
+              </label>
+            </div>
           </div>
         </div>
       </div>

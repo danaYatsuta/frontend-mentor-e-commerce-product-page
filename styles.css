@@ -611,6 +611,10 @@ video {
   margin-top: 1.75rem;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -833,6 +837,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
+}
+
+.bg-clip-padding {
+  background-clip: padding-box;
 }
 
 .fill-dark-grayish-blue {
@@ -1121,10 +1129,6 @@ video {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-}
-
-.peer:checked ~ .peer-checked\:\[\&\>div\>img\]\:opacity-50>div>img {
-  opacity: 0.5;
 }
 
 .peer:checked ~ .peer-checked\:\[\&\>img\]\:opacity-50>img {
