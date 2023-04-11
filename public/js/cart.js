@@ -18,7 +18,7 @@ export default class Cart {
   }
 
   updateCartList() {
-    if (this.cartItems === []) {
+    if (this.cartItems.length === 0) {
       this.cartFilled.style.setProperty('display', 'none');
       this.cartEmpty.style.removeProperty('display');
     } else {
@@ -27,12 +27,11 @@ export default class Cart {
 
       this.cartList.innerHTML = '';
       this.cartItems.forEach((cartItem) => {
+        const newCartListItem = document.createElement('div');
         const { item, quantity } = cartItem;
 
         /* prettier-ignore */
-        this.cartList.insertAdjacentHTML(
-          'beforeend',
-          `
+        newCartListItem.innerHTML = `
           <li class="flex h-14 items-center justify-between gap-2">
             <img
               src="${item.thumbnail}"
@@ -52,8 +51,15 @@ export default class Cart {
               <img src="./images/icon-delete.svg" alt="Trashcan icon" />
             </button>
           </li>
-          `,
-        );
+          `.trim();
+
+        const deleteCartItemButton = newCartListItem.querySelector('button');
+
+        deleteCartItemButton.addEventListener('click', () => {
+          this.removeCartItemByItem(cartItem.item);
+        });
+
+        this.cartList.appendChild(newCartListItem.firstChild);
       });
     }
   }
@@ -72,10 +78,12 @@ export default class Cart {
     this.updateCartList();
   }
 
-  removeCartItem(cartItemId) {
+  removeCartItemByItem(item) {
     this.cartItems = this.cartItems.filter(
-      (cartItem) => cartItem.id !== cartItemId,
+      (cartItem) => cartItem.item !== item,
     );
+
+    this.updateCartList();
   }
 
   openCart() {
