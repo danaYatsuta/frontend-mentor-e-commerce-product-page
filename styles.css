@@ -991,6 +991,10 @@ video {
   border-color: hsl(26 100% 55% / var(--tw-border-opacity));
 }
 
+.peer:checked ~ .peer-checked\:fill-very-dark-blue {
+  fill: hsl(220, 13%, 13%);
+}
+
 @media (min-width: 768px) {
   .md\:mx-10 {
     margin-left: 2.5rem;
