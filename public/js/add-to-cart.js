@@ -1,5 +1,5 @@
 import items from './items.js';
-import CartItem from './cart-item.js';
+import CartEntry from './cart-entry.js';
 
 export default function initalizeAddToCart(cart, itemId) {
   const quantityCounter = document.querySelector('#quantity-counter');
@@ -21,11 +21,11 @@ export default function initalizeAddToCart(cart, itemId) {
 
   addToCartButton.addEventListener('click', () => {
     if (parseInt(quantityCounter.textContent, 10) !== 0) {
-      const newCartItem = new CartItem(
+      const newCartEntry = new CartEntry(
         items.find((item) => item.id === itemId),
         parseInt(quantityCounter.textContent, 10),
       );
-      cart.addCartItem(newCartItem);
+      cart.addCartEntry(newCartEntry);
 
       // Small delay before automatically opening cart to avoid jitter
       // from DOM manipulation needed to add item to cart
