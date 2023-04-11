@@ -1,6 +1,6 @@
 export default class Cart {
   constructor() {
-    this.cartItems = [];
+    this.cartEntries = [];
 
     this.cart = document.querySelector('#cart');
     this.cartCheckbox = document.querySelector('#cart-checkbox');
@@ -18,7 +18,7 @@ export default class Cart {
   }
 
   updateCartList() {
-    if (this.cartItems.length === 0) {
+    if (this.cartEntries.length === 0) {
       this.cartFilled.style.setProperty('display', 'none');
       this.cartEmpty.style.removeProperty('display');
     } else {
@@ -26,9 +26,9 @@ export default class Cart {
       this.cartEmpty.style.setProperty('display', 'none');
 
       this.cartList.innerHTML = '';
-      this.cartItems.forEach((cartItem) => {
+      this.cartEntries.forEach((cartEntry) => {
         const newCartListItem = document.createElement('div');
-        const { item, quantity } = cartItem;
+        const { item, quantity } = cartEntry;
 
         /* prettier-ignore */
         newCartListItem.innerHTML = `
@@ -53,10 +53,10 @@ export default class Cart {
           </li>
           `.trim();
 
-        const deleteCartItemButton = newCartListItem.querySelector('button');
+        const deleteCartEntryButton = newCartListItem.querySelector('button');
 
-        deleteCartItemButton.addEventListener('click', () => {
-          this.removeCartItemByItem(cartItem.item);
+        deleteCartEntryButton.addEventListener('click', () => {
+          this.removeCartEntryByItem(cartEntry.item);
         });
 
         this.cartList.appendChild(newCartListItem.firstChild);
@@ -64,23 +64,23 @@ export default class Cart {
     }
   }
 
-  addCartItem(newCartItem) {
-    const existingCartItem = this.cartItems.find(
-      (cartItem) => cartItem.item === newCartItem.item,
+  addCartEntry(newCartEntry) {
+    const existingCartItem = this.cartEntries.find(
+      (cartEntry) => cartEntry.item === newCartEntry.item,
     );
 
     if (existingCartItem) {
-      existingCartItem.quantity += newCartItem.quantity;
+      existingCartItem.quantity += newCartEntry.quantity;
     } else {
-      this.cartItems.push(newCartItem);
+      this.cartEntries.push(newCartEntry);
     }
 
     this.updateCartList();
   }
 
-  removeCartItemByItem(item) {
-    this.cartItems = this.cartItems.filter(
-      (cartItem) => cartItem.item !== item,
+  removeCartEntryByItem(item) {
+    this.cartEntries = this.cartEntries.filter(
+      (cartEntry) => cartEntry.item !== item,
     );
 
     this.updateCartList();
