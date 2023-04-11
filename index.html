@@ -307,16 +307,24 @@
             <div
               class="flex h-14 items-center justify-between rounded-lg bg-light-grayish-blue md:w-40"
             >
-              <button class="p-6 hover:opacity-50">
+              <button
+                id="decrement-quantity-button"
+                class="p-6 hover:opacity-50"
+              >
                 <img src="./images/icon-minus.svg" alt="Minus icon" />
               </button>
 
-              <div class="font-bold text-very-dark-blue">0</div>
-              <button class="p-6 hover:opacity-50">
+              <div id="quantity-counter" class="font-bold text-very-dark-blue">0</div>
+
+              <button
+                id="increment-quantity-button"
+                class="p-6 hover:opacity-50"
+              >
                 <img src="./images/icon-plus.svg" alt="Plus icon" />
               </button>
             </div>
             <button
+              id="add-to-cart-button"
               class="flex h-14 w-full items-center justify-center gap-3 rounded-lg bg-orange shadow-lg shadow-orange/50 hover:opacity-50 md:flex-1"
             >
               <svg
