@@ -65,9 +65,11 @@ export default class Cart {
   }
 
   addCartEntry(newCartEntry) {
-    const existingCartItem = this.cartEntries.find(
+    let existingCartItem = this.cartEntries.find(
       (cartEntry) => cartEntry.item === newCartEntry.item,
     );
+
+    existingCartItem = undefined;
 
     if (existingCartItem) {
       existingCartItem.quantity += newCartEntry.quantity;

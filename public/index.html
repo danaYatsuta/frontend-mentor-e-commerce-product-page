@@ -135,21 +135,26 @@
             Cart
           </div>
 
-          <div
-            id="cart-empty"
-            class="flex h-48 items-center justify-center font-bold"
-          >
-            Your cart is empty.
-          </div>
-
-          <div id="cart-filled" style="display: none" class="p-6">
-            <ul id="cart-list" class="flex flex-col gap-2"></ul>
-
-            <button
-              class="mt-7 h-14 w-full rounded-lg bg-orange font-bold text-white hover:opacity-50"
+          <div class="flex min-h-48">
+            <div
+              id="cart-empty"
+              class="flex flex-1 items-center justify-center font-bold"
             >
-              Checkout
-            </button>
+              Your cart is empty.
+            </div>
+
+            <div
+              id="cart-filled"
+              style="display: none"
+              class="flex flex-1 flex-col justify-between p-6"
+            >
+              <ul id="cart-list" class="flex flex-col gap-2"></ul>
+              <button
+                class="mt-7 h-14 w-full rounded-lg bg-orange font-bold text-white hover:opacity-50"
+              >
+                Checkout
+              </button>
+            </div>
           </div>
         </div>
       </div>

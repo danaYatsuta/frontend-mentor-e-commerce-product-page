@@ -18,7 +18,11 @@ module.exports = {
     fontFamily: {
       'kumbh-sans': ['Kumbh Sans', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      minHeight: {
+        '48': '12rem',
+      },
+    },
   },
   plugins: [],
 };
