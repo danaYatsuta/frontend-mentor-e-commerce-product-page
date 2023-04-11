@@ -1,12 +1,10 @@
 import initializeMobileMenu from './mobile-menu.js';
 import initalizeLightbox from './lightbox.js';
-import initalizeCart from './cart.js';
 import initalizeAddToCart from './add-to-cart.js';
 import ImageView from './image-view.js';
+import Cart from './cart.js';
 
 initializeMobileMenu();
-initalizeCart();
-initalizeAddToCart();
 
 const mainImageView = new ImageView(
   '#product-image',
@@ -16,3 +14,6 @@ const mainImageView = new ImageView(
 );
 
 initalizeLightbox(mainImageView);
+
+const cart = new Cart();
+initalizeAddToCart(cart, 1);

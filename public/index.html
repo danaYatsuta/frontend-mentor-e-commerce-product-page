@@ -135,8 +135,21 @@
             Cart
           </div>
 
-          <div class="flex h-48 items-center justify-center font-bold">
+          <div
+            id="cart-empty"
+            class="flex h-48 items-center justify-center font-bold"
+          >
             Your cart is empty.
+          </div>
+
+          <div id="cart-filled" style="display: none" class="p-6">
+            <ul id="cart-list" class="flex flex-col gap-2"></ul>
+
+            <button
+              class="mt-7 h-14 w-full rounded-lg bg-orange font-bold text-white hover:opacity-50"
+            >
+              Checkout
+            </button>
           </div>
         </div>
       </div>
@@ -314,7 +327,9 @@
                 <img src="./images/icon-minus.svg" alt="Minus icon" />
               </button>
 
-              <div id="quantity-counter" class="font-bold text-very-dark-blue">0</div>
+              <div id="quantity-counter" class="font-bold text-very-dark-blue">
+                0
+              </div>
 
               <button
                 id="increment-quantity-button"
