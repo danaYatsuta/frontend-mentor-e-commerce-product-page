@@ -39,7 +39,7 @@
   >
     <header class="sticky top-0 z-10 w-full max-w-6xl bg-white pb-1 md:pb-0">
       <nav
-        class="mx-6 flex h-16 justify-between border-grayish-blue border-opacity-25 md:h-28 md:border-b"
+        class="relative mx-6 flex h-16 justify-between border-grayish-blue/25 md:h-28 md:border-b"
       >
         <div class="flex gap-4 md:gap-8 lg:gap-14">
           <button id="open-mobile-menu-button" class="md:hidden">
@@ -55,31 +55,35 @@
               href="#"
               class="flex items-center border-b-4 border-transparent hover:border-orange hover:text-very-dark-blue"
             >
-              <div>Collections</div>
+              Collections
             </a>
+
             <a
               href="#"
               class="flex items-center border-b-4 border-transparent hover:border-orange hover:text-very-dark-blue"
             >
-              <div>Men</div>
+              Men
             </a>
+
             <a
               href="#"
               class="flex items-center border-b-4 border-transparent hover:border-orange hover:text-very-dark-blue"
             >
-              <div>Women</div>
+              Women
             </a>
+
             <a
               href="#"
               class="flex items-center border-b-4 border-transparent hover:border-orange hover:text-very-dark-blue"
             >
-              <div>About</div>
+              About
             </a>
+
             <a
               href="#"
               class="flex items-center border-b-4 border-transparent hover:border-orange hover:text-very-dark-blue"
             >
-              <div>Contact</div>
+              Contact
             </a>
           </div>
         </div>
@@ -109,12 +113,26 @@
           /></a>
         </div>
       </nav>
+
+      <div class="absolute right-0 top-20 z-20 w-full max-w-sm">
+        <div class="mx-2 rounded-lg bg-white shadow-lg">
+          <div
+            class="border-b border-grayish-blue/25 p-6 font-bold text-very-dark-blue"
+          >
+            Cart
+          </div>
+
+          <div class="flex h-48 items-center justify-center font-bold">
+            Your cart is empty.
+          </div>
+        </div>
+      </div>
     </header>
 
     <nav
       id="mobile-menu"
       style="display: none"
-      class="fixed bottom-0 left-0 right-0 top-0 z-20 bg-black/75"
+      class="fixed bottom-0 left-0 right-0 top-0 z-30 bg-black/75"
     >
       <div class="fixed bottom-0 left-0 top-0 w-2/3 bg-white">
         <button id="close-mobile-menu-button" class="p-6">
@@ -246,11 +264,13 @@
             >
               Sneaker Company
             </h2>
+
             <h1
               class="mt-2 text-3xl font-bold text-very-dark-blue md:text-4xl lg:mt-4 lg:text-5xl"
             >
               Fall Limited Edition Sneakers
             </h1>
+
             <p class="mt-4 tracking-tight lg:mt-8 lg:text-lg">
               These low-profile sneakers are your perfect casual wear companion.
               Featuring a durable rubber outer sole, they'll withstand
@@ -262,10 +282,12 @@
           >
             <div class="flex items-center gap-4">
               <div class="text-3xl font-bold text-very-dark-blue">$125.00</div>
+
               <div class="rounded-md bg-pale-orange px-2 font-bold text-orange">
                 50%
               </div>
             </div>
+
             <div class="font-bold text-grayish-blue line-through">$250.00</div>
           </div>
           <div class="mt-6 flex flex-col gap-4 md:flex-row lg:mt-8">
@@ -275,6 +297,7 @@
               <button class="p-6 hover:opacity-50">
                 <img src="./images/icon-minus.svg" alt="Minus icon" />
               </button>
+
               <div class="font-bold text-very-dark-blue">0</div>
               <button class="p-6 hover:opacity-50">
                 <img src="./images/icon-plus.svg" alt="Plus icon" />
