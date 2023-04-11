@@ -59,7 +59,16 @@ export default class Cart {
   }
 
   addCartItem(newCartItem) {
-    this.cartItems.push(newCartItem);
+    const existingCartItem = this.cartItems.find(
+      (cartItem) => cartItem.item === newCartItem.item,
+    );
+
+    if (existingCartItem) {
+      existingCartItem.quantity += newCartItem.quantity;
+    } else {
+      this.cartItems.push(newCartItem);
+    }
+
     this.updateCartList();
   }
 
