@@ -25,6 +25,10 @@ export default function initializeMobileMenu() {
     body.style.removeProperty('overflow');
 
     menuOpen = false;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      menu.style.setProperty('display', 'none');
+    }
   });
 
   menu.addEventListener('transitionend', () => {

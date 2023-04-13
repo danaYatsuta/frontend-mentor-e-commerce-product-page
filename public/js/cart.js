@@ -34,6 +34,10 @@ export default class Cart {
   closeCart() {
     this.cart.classList.add('opacity-0');
     this.cart.classList.add('translate-y-2');
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.cart.style.setProperty('display', 'none');
+    }
   }
 
   updateCartList() {
