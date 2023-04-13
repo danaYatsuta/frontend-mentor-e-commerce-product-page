@@ -27,11 +27,7 @@ export default function initalizeAddToCart(cart, itemId) {
       );
       cart.addCartEntry(newCartEntry);
 
-      // Small delay before automatically opening cart to avoid jitter
-      // from DOM manipulation needed to add item to cart
-      setTimeout(() => {
-        cart.openCart();
-      }, 50);
+      cart.openCart();
 
       quantityCounter.textContent = 0;
     }
