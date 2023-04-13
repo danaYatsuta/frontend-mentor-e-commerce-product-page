@@ -27,7 +27,7 @@ export default function initalizeAddToCart(cart, itemId) {
       );
       cart.addCartEntry(newCartEntry);
 
-      cart.openCart();
+      cart.openCartExternally();
 
       quantityCounter.textContent = 0;
     }
