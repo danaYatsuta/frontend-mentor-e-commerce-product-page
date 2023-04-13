@@ -4,8 +4,6 @@ export default function initializeMobileMenu() {
   const openButton = document.querySelector('#open-mobile-menu-button');
   const closeButton = document.querySelector('#close-mobile-menu-button');
 
-  let menuOpen = false;
-
   openButton.addEventListener('click', () => {
     menu.style.removeProperty('display');
     setTimeout(() => {
@@ -14,8 +12,6 @@ export default function initializeMobileMenu() {
       menu.firstElementChild.classList.remove('-translate-x-full');
     }, 0);
     body.style.setProperty('overflow', 'hidden');
-
-    menuOpen = true;
   });
 
   closeButton.addEventListener('click', () => {
@@ -24,15 +20,13 @@ export default function initializeMobileMenu() {
     menu.firstElementChild.classList.add('-translate-x-full');
     body.style.removeProperty('overflow');
 
-    menuOpen = false;
-
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       menu.style.setProperty('display', 'none');
     }
   });
 
   menu.addEventListener('transitionend', () => {
-    if (!menuOpen) {
+    if (menu.classList.contains('bg-opacity-0')) {
       menu.style.setProperty('display', 'none');
     }
   });
