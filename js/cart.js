@@ -10,11 +10,30 @@ export default class Cart {
 
     this.cartCheckbox.addEventListener('click', () => {
       if (this.cartCheckbox.checked) {
-        this.cart.style.removeProperty('display');
+        this.openCart();
       } else {
+        this.closeCart();
+      }
+    });
+
+    this.cart.addEventListener('transitionend', () => {
+      if (this.cart.classList.contains('opacity-0')) {
         this.cart.style.setProperty('display', 'none');
       }
     });
+  }
+
+  openCart() {
+    this.cart.style.removeProperty('display');
+    setTimeout(() => {
+      this.cart.classList.remove('opacity-0');
+      this.cart.classList.remove('translate-y-2');
+    }, 0);
+  }
+
+  closeCart() {
+    this.cart.classList.add('opacity-0');
+    this.cart.classList.add('translate-y-2');
   }
 
   updateCartList() {
@@ -99,8 +118,8 @@ export default class Cart {
     this.updateCartList();
   }
 
-  openCart() {
+  openCartExternally() {
     this.cartCheckbox.checked = true;
-    this.cart.style.removeProperty('display');
+    this.openCart();
   }
 }
