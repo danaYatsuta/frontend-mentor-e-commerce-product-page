@@ -667,10 +667,6 @@ video {
   width: 2.5rem;
 }
 
-.w-14 {
-  width: 3.5rem;
-}
-
 .w-2\/3 {
   width: 66.666667%;
 }
@@ -1027,6 +1023,10 @@ video {
   transition-duration: 500ms;
 }
 
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .hover\:border-orange:hover {
   --tw-border-opacity: 1;
   border-color: hsl(26 100% 55% / var(--tw-border-opacity));
@@ -1091,12 +1091,12 @@ video {
     height: 100%;
   }
 
-  .md\:w-40 {
-    width: 10rem;
-  }
-
   .md\:w-14 {
     width: 3.5rem;
+  }
+
+  .md\:w-40 {
+    width: 10rem;
   }
 
   .md\:max-w-md {
