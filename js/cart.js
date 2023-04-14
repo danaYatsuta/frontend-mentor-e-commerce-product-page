@@ -106,7 +106,7 @@ export default class Cart {
               </svg>
             </button>
           </li>
-          `.trim();
+          `;
 
         const deleteCartEntryButton = newCartListItem.querySelector('button');
 
@@ -114,7 +114,7 @@ export default class Cart {
           this.removeCartEntryByItem(cartEntry.item);
         });
 
-        this.cartList.appendChild(newCartListItem.firstChild);
+        this.cartList.appendChild(newCartListItem.firstElementChild);
       });
 
       this.cartFilled.style.removeProperty('display');
