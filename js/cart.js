@@ -4,6 +4,9 @@ export default class Cart {
 
     this.cart = document.querySelector('#cart');
     this.cartCheckbox = document.querySelector('#cart-checkbox');
+    this.cartCheckboxLabel = document.querySelector(
+      'label[for="cart-checkbox"]',
+    );
     this.cartEmpty = document.querySelector('#cart-empty');
     this.cartFilled = document.querySelector('#cart-filled');
     this.cartList = document.querySelector('#cart-list');
@@ -13,6 +16,15 @@ export default class Cart {
         this.openCart();
       } else {
         this.closeCart();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (
+        !this.cart.contains(e.target) &&
+        !this.cartCheckboxLabel.contains(e.target)
+      ) {
+        this.closeCartExternally();
       }
     });
 
@@ -38,6 +50,16 @@ export default class Cart {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       this.cart.style.setProperty('display', 'none');
     }
+  }
+
+  openCartExternally() {
+    this.cartCheckbox.checked = true;
+    this.openCart();
+  }
+
+  closeCartExternally() {
+    this.cartCheckbox.checked = false;
+    this.closeCart();
   }
 
   updateCartList() {
@@ -120,10 +142,5 @@ export default class Cart {
     );
 
     this.updateCartList();
-  }
-
-  openCartExternally() {
-    this.cartCheckbox.checked = true;
-    this.openCart();
   }
 }
