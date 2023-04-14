@@ -7,6 +7,7 @@ export default class Cart {
     this.cartCheckboxLabel = document.querySelector(
       'label[for="cart-checkbox"]',
     );
+    this.cartQuantityIcon = document.querySelector('#cart-quantity-icon');
     this.cartEmpty = document.querySelector('#cart-empty');
     this.cartFilled = document.querySelector('#cart-filled');
     this.cartList = document.querySelector('#cart-list');
@@ -64,6 +65,7 @@ export default class Cart {
 
   updateCartList() {
     if (this.cartEntries.length === 0) {
+      this.cartQuantityIcon.style.setProperty('display', 'none');
       this.cartFilled.style.setProperty('display', 'none');
       this.cartEmpty.style.removeProperty('display');
     } else {
@@ -117,6 +119,12 @@ export default class Cart {
         this.cartList.appendChild(newCartListItem.firstElementChild);
       });
 
+      this.cartQuantityIcon.textContent = this.cartEntries.reduce(
+        (acc, cur) => acc + cur.quantity,
+        0,
+      );
+
+      this.cartQuantityIcon.style.removeProperty('display');
       this.cartFilled.style.removeProperty('display');
       this.cartEmpty.style.setProperty('display', 'none');
     }
