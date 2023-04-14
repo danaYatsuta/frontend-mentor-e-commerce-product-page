@@ -8,8 +8,7 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
+- [Built with](#built-with)
 - [Author](#author)
 
 ## Overview
@@ -31,14 +30,15 @@ Users should be able to:
 
 ### Links
 
+- Solution URL: [Solution page on Frontend Mentor](https://www.frontendmentor.io/solutions/solution-using-tailwind-css-and-vanilla-js-GFMiGXrfVp)
 - Live Site URL: [GitHub Pages](https://danayatsuta.github.io/frontend-mentor-e-commerce-product-page/)
 
-## My process
+## Built with
 
-### Built with
-
-- Semantic HTML5 markup
 - [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- Semantic HTML5 markup
 - Mobile-first workflow
 - Vanilla JS
 
